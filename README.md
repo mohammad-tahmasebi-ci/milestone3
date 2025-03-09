@@ -228,3 +228,11 @@ And the user is returned to the Signon screen.
 - Provide Admin menu to view/manage appointments.
 - Provide screen to display patient information to Admin/doctors.
 - Review password encryption, e.g. multifactor authentication.
+
+## Testing
+
+<p align="center"><img src="appointments/static/images/python-code-checker.png" alt="Python Code Check" width="300px" height="100px"></p>
+<p align="center"><img src="appointments/static/images/ci-python-linter.png" alt="Python Linter" width="300px" height="100px"></p>
+<p align="center"><img src="appointments/static/images/js-validator.png" alt="JS Validator" width="300px" height="100px"></p>
+<p align="center"><img src="appointments/static/images/css-validator.png" alt="CSS Validator" width="300px" height="100px"></p>
+<p align="center"><img src="appointments/static/images/pytest.png" alt="Python Pytest" width="300px" height="100px"></p>
