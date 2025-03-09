@@ -42,7 +42,7 @@ extra steps as the need arises.
 ## Design
 
 The design is to provide patients with an easy to follow system in order to view, make, update, delete appointments.
-This will remove confusion and reduce the process to few simple steps.  This will also provide surgery's addmin staff
+This will remove confusion and reduce the process to few simple steps.  This will also provide surgery's admin staff
 with more time to spend on more critical tasks.
 Design is broken into the following main sections:
 
@@ -237,3 +237,41 @@ And the user is returned to the Signon screen.
 <p align="center"><img src="appointments/static/images/css-validator.png" alt="CSS Validator" width="300px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/pytest.png" alt="Python Pytest" width="300px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/jest-test.png" alt="Jest Test" width="300px" height="100px"></p>
+
+
+## Deployment
+
+Github Pages
+
+GitHub Pages used to deploy live version of the website.
+1.	Log in to GitHub and locate GitHub Repository milestone-project
+2.	At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
+3.	Scroll down the Settings page until you locate "GitHub Pages".
+4.	Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
+5.	The page will automatically refresh.
+6.	Scroll back to locate the now-published site link in the "GitHub Pages" section.
+
+Forking the GitHub Repository
+
+By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
+1.	Log in to GitHub and locate GitHub Repository milestone-project 
+2.	At the top of the Repository(under the main navigation) locate "Fork" button.
+3.	Now you should have a copy of the original repository in your GitHub account.
+
+Local Clone
+
+1.	Log in to GitHub and locate GitHub Repository milestone-project
+2.	Under the repository name click "Clone or download"
+3.	Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4.	Open Git Bash
+5.	Change the current working directory to the location where you want the cloned directory to be made.
+6.	Type git clone and then paste The URL copied in the step 3.
+7.	Press Enter and your local clone will be created.
+
+## Credits and Acknowledgements
+
+Thanks to my mentor, Mitko Bachvarov, for providing helpful suggestions, feedback, and links to different guides to assist with this project.
+<br />
+Thanks, also, to Miguel Ortega Logorreta, learning assistant, for the advice and guidance offered to assist with the project.
+<br />
+Code Institute for the educational materials.
