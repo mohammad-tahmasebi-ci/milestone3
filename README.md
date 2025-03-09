@@ -46,12 +46,12 @@ This will remove confusion and reduce the process to few simple steps.  This wil
 with more time to spend on more critical tasks.
 Design is broken into the following main sections:
 
--Signup
--Signon
--Home page
--Make/view appointment
--Update appointment
--Delete Appointment
+- Signup
+- Signon
+- Home page
+- Make/view appointment
+- Update appointment
+- Delete Appointment
 
 ### Design Wireframes
 
