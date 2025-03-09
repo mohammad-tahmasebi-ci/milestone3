@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+<!-- navbar menu option to be displayed on this screen -->
+{% block navoptions %}
+
+<li><a href="{{ url_for('home_page') }}">Home</a></li>
+<li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h5>Select Appointment Date And Time</h5>
+
+        <form action="{{ url_for('choose_date_time') }}" method="POST">
+            <!-- Date Dropdown (Datepicker) -->
+            <select type="text" id="appointment_date_dropdown" name="appointment_date">
+                {% for adate in aptmnt_days %}
+                    <option value="{{ adate.AvailableDays }}">{{ adate.AvailableDays }}</option>
+                {% endfor %}
+            </select>
+            <!-- Time Dropdown (Timepicker) -->
+            <select type="text" id="appointment_time_dropdown" name="appointment_time">
+                {% for atime in aptmnt_times %}
+                        <option value="{{ atime.AvailableTimes }}">{{ atime.AvailableTimes }}</option>
+                {% endfor %}
+            </select>
+            <!-- Submit Button -->
+            <button type="submit" class="btn waves-effect waves-light">Next</button>
+        </form>
+    </div>
+
+{% endblock %}
