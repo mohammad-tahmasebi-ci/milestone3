@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+/* set general configuration */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* end general configuration */ 
+
+/* set base template configuration to be inherited by all page */ 
+html,
+body {
+  height: 100%; 
+  background: #282a36;
+  margin: auto;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url("../images/medical.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main {
+  flex: 1 0 auto;
+}
+/* end base template configuration */ 
+
+/* begin signon/signup pages' css instructions */ 
+.form-wrapper {
+  overflow: hidden; 
+  place-items: center;
+  max-width: 60%;
+  background: #fff;
+  padding: 20px; 
+  margin-top: 50px;
+  margin-left: 20%;
+  border-radius: 15px;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper .title {
+  width: 100%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-wrapper form {
+  width: 100%;
+  padding-right: 15px;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-wrapper form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-wrapper form .field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 15px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+
+.form-wrapper form .field input:focus {
+  border-color: #1a75ff;
+  background-color: bisque;
+}
+
+.form-wrapper form .field input::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder {
+  color: #1a75ff;
+}
+
+form .field.btn {
+  height: 50px;
+  width: 104%;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+form .btn input[type="submit"] {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* end of signon/signup pages' css instructions */
+
+/* begin footer configuration */ 
+footer {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.custom-large {
+  font-size: 18px;
+}
+
+#card-btn {
+  background-color: red;
+  color: darkviolet;
+}
+/* end general configuration */ 
+
+/* begin modal user-message box configuration */ 
+#modal1 {
+  width: 600px;
+  height: 150px;
+  margin-top: 100px;
+  background-color: rgb(179, 238, 232);
+}
+
+#modal1 .modal-footer {
+  background-color: rgb(179, 238, 232);
+}
+/* end modal user-message box configuration */
