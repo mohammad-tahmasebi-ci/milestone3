@@ -164,11 +164,11 @@ as whether the patient has any special requirement; e.g. wheelchair access, lift
 <p align="center"><img src="appointments/static/images/appointment-urgency.png" alt="Appointment Urgency" width="400px" height="200px"></p>
 At the next stage, an attempt is made at making the appointment.  If the user does not have an existing appointment, for the same date/time, 
 the appointment will be saved and the user is informed as such:
-<p align="center"><img src="appointments/static/images/appointment-successful.png" alt="Appointment Successful" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/appointment-successful.png" alt="Appointment Successful" width="300px" height="100px"></p>
 The user is then returned to the Appointments screen where the recent booking is displayed, as shown below:
 <p align="center"><img src="appointments/static/images/appointment-display.png" alt="Appointment Display" width="400px" height="200px"></p>
 If the user attempts to make another appointment for the same date/time combination the following message will be displayed:
-<p align="center"><img src="appointments/static/images/duplicate-appointment.png" alt="duplicate appointment" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/duplicate-appointment.png" alt="duplicate appointment" width="300px" height="100px"></p>
 And the attempt will fail.
 
 
@@ -183,13 +183,13 @@ changing the doctor:
 <p align="center"><img src="appointments/static/images/update-doctor-urgency.png" alt="Update Doctor Urgency" width="400px" height="200px"></p>
 As noted above, appointment information has been carried on to the update screen.  Upon clicking the Next button, the user will get a message 
 as to the success/failure of the process:
-<p align="center"><img src="appointments/static/images/update-appointment-successful.png" alt="Update Appointment Successful" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/update-appointment-successful.png" alt="Update Appointment Successful" width="300px" height="100px"></p>
 And the user is returned to the Appointment screen where a list of existing appointments is displayed:
 <p align="center"><img src="appointments/static/images/appointment-after-update.png" alt="Appointment After Update" width="400px" height="200px"></p>
 If, on the other hand, the Delete button is selected for an existing appointment, the following screen is displayed to confirm user’s choice:
 <p align="center"><img src="appointments/static/images/delete-appointment.png" alt="Delete Appointment" width="400px" height="200px"></p>
 Upon clicking the Delete button, an attempt is made to delete the appointment and inform the user via a message screen of the outcome:
-<p align="center"><img src="appointments/static/images/delete-appointment-successful.png" alt="Delete Appointment Successful" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/delete-appointment-successful.png" alt="Delete Appointment Successful" width="300px" height="100px"></p>
 And the user is returned to the Appointment screen, where a list of all existing appointments is displayed:
 <p align="center"><img src="appointments/static/images/appointment-after-delete.png" alt="Appointment After Delete" width="400px" height="200px"></p>
 
@@ -198,7 +198,7 @@ As a user, I’d like to be able to logout of the system securely.
 
 The Logout menu option, on the Home and the Appointments screens, is provided for this purpose.  Once this option is selected, user’s session 
 information is deleted and the following message is displayed:
-<p align="center"><img src="appointments/static/images/logout-message.png" alt="Logout Message" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/logout-message.png" alt="Logout Message" width="300px" height="100px"></p>
 And the user is returned to the Signon screen.
 
 ## Features
