@@ -91,7 +91,7 @@ Design is broken into the following main sections:
 As a new patient I’d like to be able to register easily and have a confirmation of the process's result.
 
 A signup screen is provided for this purpose, as displayed below:
-<p align="center"><img src="appointments/static/images/registration-form.png" alt="Registration Form" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/registration-form.png" alt="Registration Form" width="400px" height="300px"></p>
 Comments are placed on each input field to indicate the required data. Fields are also marked as required, ensuring requested information 
 is provided by the user. No attempts will be made at registering the user until all data is provided. 
 If the user attempts to register as an existing user the following message will be displayed:
