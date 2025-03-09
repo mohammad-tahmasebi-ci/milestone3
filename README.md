@@ -231,8 +231,9 @@ And the user is returned to the Signon screen.
 
 ## Testing
 
-<p align="center"><img src="appointments/static/images/python-code-checker.png" alt="Python Code Check" width="300px" height="100px"></p>
-<p align="center"><img src="appointments/static/images/ci-python-linter.png" alt="Python Linter" width="300px" height="100px"></p>
-<p align="center"><img src="appointments/static/images/js-validator.png" alt="JS Validator" width="300px" height="100px"></p>
-<p align="center"><img src="appointments/static/images/css-validator.png" alt="CSS Validator" width="300px" height="100px"></p>
-<p align="center"><img src="appointments/static/images/pytest.png" alt="Python Pytest" width="300px" height="100px"></p>
+<p align="center"><img src="appointments/static/images/python-code-checker.png" alt="Python Code Check" width="300px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/ci-python-linter.png" alt="Python Linter" width="300px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/js-validator.png" alt="JS Validator" width="300px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/css-validator.png" alt="CSS Validator" width="300px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/pytest.png" alt="Python Pytest" width="300px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/jest-test.png" alt="Jest Test" width="300px" height="100px"></p>
