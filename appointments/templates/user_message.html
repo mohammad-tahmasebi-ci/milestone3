@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="modal-body blue-text text-darken-2 lighten-4">
+          <p class="center-align">{{ user_message }}</p>  <!-- Dynamic message passed from Flask -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="{{ url_for( forward_page )}}" class="modal-close waves-effect waves-green btn-flat blue-text text-darken-2">Close</a>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
