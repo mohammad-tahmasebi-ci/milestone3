@@ -1,0 +1,43 @@
+{% extends "base.html"%}
+
+<!-- navbar menu option to be displayed on this screen -->
+{% block navoptions %}
+
+<li><a href="{{ url_for('home_page') }}">Home</a></li>
+<li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+<h3 class="light-blue-text text-darken-3 center-align">Appointments</h3>
+
+<!-- button to enable users to create new appointments -->
+<div class="row">
+    <div class="col s12 center-align">
+      <a href="{{ url_for('choose_date_time')}}" class="btn-large light-blue darken-2">Add Appointments <i class="fas fa-plus-square right"></i></a>
+    </div>
+</div>
+
+<div class="row">
+  {% for a in appointments %}
+  <div class="col s6 m4 l3">
+      <div class="card light-blue-text text-darken-1 center-align">
+        <!-- details of existing appointments to be displayed, each on a separate card -->
+        <div class="card-content">
+            <p>Doctor: {{ a.FirstName }} {{ a.LastName }} </p>
+            <p>On/At: {{ a.AppointmentDate }} {{ a.AppointmentTime }} </p>
+        </div>
+        <!-- Card Action -->
+        <!-- options made available to update/delete a selected appointment  -->
+        <div class="card-action">
+            <input type="hidden" name="card_id" value="{{ a.AppointmentId }}" />
+            <a href="{{ url_for('confirm_appointment_update', appointment=a.AppointmentId) }}" class="btn green" id="card-btn">Update</a>
+            <a href="{{ url_for('confirm_appointment_deletion', appointment=a.AppointmentId) }}" class="btn red" id="card-btn">Delete</a>
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}        
