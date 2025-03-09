@@ -1,0 +1,61 @@
+{% extends "base.html"%}
+
+<!-- navbar menu option to be displayed on this screen -->
+{% block navoptions %}
+
+<li><a href="{{ url_for('home_page') }}">Home</a></li>
+<li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+{% endblock %}
+
+{% block content %}
+
+<h3 class="light-blue-text text-darken-3 center-align">Choose A Doctor</h3>
+
+<div class="wrapper" >
+  <form class="primary-text" method="POST" action="{{ url_for('choose_doctor') }}">
+    {% for doctor in doctors %}
+      <p>
+        <!-- list of available doctors for the chosen date/time -->
+        <label class="custom-large">
+        {% if doctor in unavailable_doctors %}
+          <input name="doctors_list" type="radio" value="{{ doctor.DoctorId }}" class="left-align" disabled />
+          <span class="brown-text left-align">{{ doctor.FirstName }} {{ doctor.LastName }} ({{ doctor.Sex }}), Speciality: {{ doctor.Speciality }}, doctor unavailable on the selected date</span>
+        {% else %}
+          <input name="doctors_list" type="radio" value="{{ doctor.DoctorId }}" class="left-align" required/>
+          <span class="brown-text left-align">{{ doctor.FirstName }} {{ doctor.LastName }} ({{ doctor.Sex }}), Speciality: {{ doctor.Speciality }}</span>
+        {% endif %}
+        </label>
+      </p>
+    {% endfor %}
+      <p class="center-align">
+        <!-- text field to get patient's special requirement -->
+        <label class="custom-large">
+          <input type="text" name="special_requirement" class="brown-text center-align" />
+          <span class="brown-text">Special Requirement?</span>
+        </label>
+      </p>
+      <p class="center-align">
+        <!-- text field to get patient's symptoms/condition -->
+        <label class="custom-large">
+          <input type="text" name="symptoms" class="center-align brown-text" required/>
+          <span class="brown-text">Symptoms</span>
+        </label>
+      </p>
+      <br>
+      <p class="center-align">
+        <!-- checkbox to indicate whether the appointment is an urgent one -->
+        <label class="custom-large">
+          <input type="checkbox" class="filled-in" name="urgent" id="urgent" value="" onclick="check_uncheck" />
+          <span class="brown-text">Is Urgent?</span>
+        </label>
+      </p>
+      <br>
+      <!-- Submit Button -->
+      <div class="center-align">
+        <button type="submit" class="btn waves-effect waves-light">Next</button>
+      </div>
+  </form>
+</div>
+
+{% endblock %}        
