@@ -91,11 +91,11 @@ Design is broken into the following main sections:
 As a new patient I’d like to be able to register easily and have a confirmation of the process's result.
 
 A signup screen is provided for this purpose, as displayed below:
-<p align="center"><img src="appointments/static/images/registration-form.png" alt="Registration Form" width="400px" height="300px"></p>
+<p align="center"><img src="appointments/static/images/registration-form.png" alt="Registration Form" width="400px" height="400px"></p>
 Comments are placed on each input field to indicate the required data. Fields are also marked as required, ensuring requested information 
 is provided by the user. No attempts will be made at registering the user until all data is provided. 
 If the user attempts to register as an existing user the following message will be displayed:
-<p align="center"><img src="appointments/static/images/duplicate-user-message.png" alt="Duplicate Registration" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/duplicate-user-message.png" alt="Duplicate Registration" width="300px" height="100px"></p>
 And the user will be returned to the signup screen.
 A password confirmation field has been provided to ensure the user has entered the desired password.  Password is, then, encrypted and stored 
 on a database.  There is, also, a field to get a list of medications the user is allergic to.
