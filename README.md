@@ -107,21 +107,21 @@ The signon screen is displayed below:
 As with the Signup screen, above fields contain information as to the data required for each field and no attempt at signing on will be made 
 until all data is provided.  Once the required user information is provided a check is made against the DB to ensure the user exist.  
 If not the following message is presented:
-<p align="center"><img src="appointments/static/images/user-no-exist.png" alt="User Not Exist" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/user-no-exist.png" alt="User Not Exist" width="300px" height="100px"></p>
 The user, then, is directed to the Signup screen.
 If incorrect information is provided, a message will inform the user and instruct a retry, as displayed below:
 <p align="center"><img src="appointments/static/images/incorrect-user-details.png" alt="Incorrect User Details" width="400px" height="200px"></p>
 Upon a successful signon, the user will be presented with the following message:
-<p align="center"><img src="appointments/static/images/successful-login.png" alt="Successful Login" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/successful-login.png" alt="Successful Login" width="300px" height="100px"></p>
 And will be, subsequently, directed to the Home page, as displayed below:
-<p align="center"><img src="appointments/static/images/welcome-page.png" alt="Welcome Page" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/welcome-page.png" alt="Welcome Page" width="600px" height="200px"></p>
 On the above Home screen, a message welcomes users to the site, provides menu options to view/make appointments, as well as logging out of 
 the site. Also an enquiry form is provided, enabling users to provide the practice with any concerns, advice they might have, as displayed 
 below:
 <p align="center"><img src="appointments/static/images/user-enquiry-form.png" alt="User Enquiry Form" width="400px" height="200px"></p>
 After filling in the form, once the send button is pressed, a message box will inform the user of the submission of the form, as displayed 
 below:
-<p align="center"><img src="appointments/static/images/enquiry-submitted.png" alt="Enquiry Submitted" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/enquiry-submitted.png" alt="Enquiry Submitted" width="300px" height="100px"></p>
 Afterwards, the user will be returned to the Home page.
 
 
