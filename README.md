@@ -114,11 +114,11 @@ If incorrect information is provided, a message will inform the user and instruc
 Upon a successful signon, the user will be presented with the following message:
 <p align="center"><img src="appointments/static/images/successful-login.png" alt="Successful Login" width="300px" height="100px"></p>
 And will be, subsequently, directed to the Home page, as displayed below:
-<p align="center"><img src="appointments/static/images/welcome-page.png" alt="Welcome Page" width="500px" height="400px"></p>
+<p align="center"><img src="appointments/static/images/welcome-page.png" alt="Welcome Page" width="600px" height="400px"></p>
 On the above Home screen, a message welcomes users to the site, provides menu options to view/make appointments, as well as logging out of 
 the site. Also an enquiry form is provided, enabling users to provide the practice with any concerns, advice they might have, as displayed 
 below:
-<p align="center"><img src="appointments/static/images/user-enquiry-form.png" alt="User Enquiry Form" width="500px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/user-enquiry-form.png" alt="User Enquiry Form" width="500px" height="300px"></p>
 After filling in the form, once the send button is pressed, a message box will inform the user of the submission of the form, as displayed 
 below:
 <p align="center"><img src="appointments/static/images/enquiry-submitted.png" alt="Enquiry Submitted" width="300px" height="100px"></p>
@@ -143,7 +143,7 @@ Based on the selected date, doctors’ availability could be different.  This is
 off.  If the selected date coincides with a doctor’s day off, that doctor will be listed but will not be selectable.  A message along with the 
 name of  the doctor will inform the user of this fact.
 E.g. the Doctors table on the test DB currently holds the following data:
-<p align="center"><img src="appointments/static/images/doctor-availability.png" alt="Doctor Availability" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/doctor-availability.png" alt="Doctor Availability" width="600px" height="100px"></p>
 As a result an appointment date prior to March 10, 2025 should list all three doctors as available. This has been displayed in the above screenshot.
 An appointment for March 10, 2025 should display one doctor as unavailable, as displayed below:
 <p align="center"><img src="appointments/static/images/doctor-availability-date1.png" alt="Doctor Availability Date1" width="400px" height="200px"></p>
