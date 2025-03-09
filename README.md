@@ -42,7 +42,8 @@ extra steps as the need arises.
 ## Design Idea
 
 The design is to provide patients with an easy to follow system in order to view, make, update, delete appointments.
-This will remove confusion and reduce the process to few simple steps.
+This will remove confusion and reduce the process to few simple steps.  This will also provide surgery's addmin staff
+with more time to spend on more critical tasks.
 Design is broken into the following main sections:
 
 -Signup 
@@ -54,8 +55,8 @@ Design is broken into the following main sections:
 
 ### Design Wireframes
 
-<p align="center"><img src="appointments/static/images/signup.png" alt="Signup Form" width="400px" height="200px"></p>
-<p align="center"><img src="appointments/static/images/signon.png" alt="Signon Form" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/signup.png" alt="Signup Form" width="400px" height="400px"></p>
+<p align="center"><img src="appointments/static/images/signon.png" alt="Signon Form" width="400px" height="300px"></p>
 <p align="center"><img src="appointments/static/images/home-page.png" alt="Home Page" width="400px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/view-make-appointments.png" alt="View-Make Appointments" width="400px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/date-time-selection.png" alt="Date-Time Selection" width="400px" height="200px"></p>
