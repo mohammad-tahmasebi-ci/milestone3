@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <h4>Are you sure you want to update this Appointment?</h4>
+    <div class="col s6">
+        <div class="card light-blue-text text-darken-1 center-align">
+            <!-- details of the appointment to be updated -->
+            <div class="card-content">
+                <p>Doctor: {{ appointment_to_update.FirstName }} {{ appointment_to_update.LastName }} </p>
+                <p>On/At: {{ appointment_to_update.AppointmentDate }} {{ appointment_to_update.AppointmentTime }} </p>
+            </div>
+            <div class="card-action">
+                <!-- Form to confirm update -->
+                <form method="POST" action="{{ url_for('confirm_appointment_update', appointment=appointment_to_update.AppointmentId) }}">
+                    <button type="submit" class="btn green">Update</button>
+                    <a href="{{ url_for('view_appointments') }}" class="btn">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
