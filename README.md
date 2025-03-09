@@ -78,7 +78,7 @@ Design is broken into the following main sections:
 ## Frameworks, Libraries, Programs Used
 
 - Github
-- SQLAlchemy
+- SQLAlchemy ORM
 - Postgres
 - Flask
 - Fontawesome
@@ -238,6 +238,13 @@ And the user is returned to the Signon screen.
 <p align="center"><img src="appointments/static/images/pytest.png" alt="Python Pytest" width="300px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/jest-test.png" alt="Jest Test" width="300px" height="100px"></p>
 
+### Issues Encountered
+
+Most issues were due to unfamiliarity with technologies being used.  E.g. how to construct the required query/subquery in SQLAlchemy ORM.
+Another issue was using Flask conditional statements in templates to arrive at the desired result.  E.g. when trying to display a list of
+doctors but have the ones unavailable disabled.  The issue was resolve by combining parameters passed in to the template and use of For 
+loop as well as IF statements.
+statement
 
 ## Deployment
 
