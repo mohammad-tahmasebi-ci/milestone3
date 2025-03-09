@@ -110,15 +110,15 @@ If not the following message is presented:
 <p align="center"><img src="appointments/static/images/user-not-exist.png" alt="User Not Exist" width="300px" height="100px"></p>
 The user, then, is directed to the Signup screen.
 If incorrect information is provided, a message will inform the user and instruct a retry, as displayed below:
-<p align="center"><img src="appointments/static/images/incorrect-user-details.png" alt="Incorrect User Details" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/incorrect-user-details.png" alt="Incorrect User Details" width="300px" height="100px"></p>
 Upon a successful signon, the user will be presented with the following message:
 <p align="center"><img src="appointments/static/images/successful-login.png" alt="Successful Login" width="300px" height="100px"></p>
 And will be, subsequently, directed to the Home page, as displayed below:
-<p align="center"><img src="appointments/static/images/welcome-page.png" alt="Welcome Page" width="600px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/welcome-page.png" alt="Welcome Page" width="500px" height="400px"></p>
 On the above Home screen, a message welcomes users to the site, provides menu options to view/make appointments, as well as logging out of 
 the site. Also an enquiry form is provided, enabling users to provide the practice with any concerns, advice they might have, as displayed 
 below:
-<p align="center"><img src="appointments/static/images/user-enquiry-form.png" alt="User Enquiry Form" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/user-enquiry-form.png" alt="User Enquiry Form" width="500px" height="200px"></p>
 After filling in the form, once the send button is pressed, a message box will inform the user of the submission of the form, as displayed 
 below:
 <p align="center"><img src="appointments/static/images/enquiry-submitted.png" alt="Enquiry Submitted" width="300px" height="100px"></p>
