@@ -82,6 +82,7 @@ Design is broken into the following main sections:
 - Postgres
 - Flask
 - Fontawesome
+- Google fonts
 - Am I Responsive
 - W3C HTML/CSS validator
 - Javascript validator
