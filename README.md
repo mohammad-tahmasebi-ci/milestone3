@@ -60,9 +60,9 @@ Design is broken into the following main sections:
 <p align="center"><img src="appointments/static/images/home-page.png" alt="Home Page" width="400px" height="500px"></p>
 <p align="center"><img src="appointments/static/images/view-make-appointments.png" alt="View-Make Appointments" width="400px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/date-time-selection.png" alt="Date-Time Selection" width="400px" height="200px"></p>
-<p align="center"><img src="appointments/static/images/doctor-selection.png" alt="Doctor Selection" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/doctor-selection.png" alt="Doctor Selection" width="400px" height="400px"></p>
 <p align="center"><img src="appointments/static/images/update-appointments.png" alt="Update Appointments" width="400px" height="200px"></p>
-<p align="center"><img src="appointments/static/images/delete-Appointments.png" alt="Delete Appointments" width="400px" height="200px"></p>
+<p align="center"><img src="appointments/static/images/delete-appointments.png" alt="Delete Appointments" width="400px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/db-schema.png" alt="DB Schema" width="400px" height="700px"></p>
 
 
