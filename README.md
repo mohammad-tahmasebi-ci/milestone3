@@ -275,3 +275,5 @@ Thanks to my mentor, Mitko Bachvarov, for providing helpful suggestions, feedbac
 Thanks, also, to Miguel Ortega Logorreta, learning assistant, for the advice and guidance offered to assist with the project.
 <br />
 Code Institute for the educational materials.
+<br />
+Background medical image from pintrest.co.uk
