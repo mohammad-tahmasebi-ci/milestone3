@@ -107,7 +107,7 @@ The signon screen is displayed below:
 As with the Signup screen, above fields contain information as to the data required for each field and no attempt at signing on will be made 
 until all data is provided.  Once the required user information is provided a check is made against the DB to ensure the user exist.  
 If not the following message is presented:
-<p align="center"><img src="appointments/static/images/user-no-exist.png" alt="User Not Exist" width="300px" height="100px"></p>
+<p align="center"><img src="appointments/static/images/user-not-exist.png" alt="User Not Exist" width="300px" height="100px"></p>
 The user, then, is directed to the Signup screen.
 If incorrect information is provided, a message will inform the user and instruct a retry, as displayed below:
 <p align="center"><img src="appointments/static/images/incorrect-user-details.png" alt="Incorrect User Details" width="400px" height="200px"></p>
