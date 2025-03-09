@@ -39,7 +39,7 @@ extra steps as the need arises.
 
 * [Credits and Acknowledgements](#credits-and-acknowledgements)
 
-## Design Idea
+## Design
 
 The design is to provide patients with an easy to follow system in order to view, make, update, delete appointments.
 This will remove confusion and reduce the process to few simple steps.  This will also provide surgery's addmin staff
