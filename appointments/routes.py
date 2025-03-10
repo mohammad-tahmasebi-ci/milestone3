@@ -36,14 +36,10 @@ def validate_input(
                 dob, "%d-%m-%Y").date() <
             (datetime.today().date() -
             timedelta(days=90)))) and
-            (housenum.translate(str.maketrans(
-                '', '', string.punctuation)).isalnum()) and
-            (street.translate(str.maketrans(
-                '', '', string.punctuation)).isalpha()) and
-            (pcode.translate(str.maketrans(
-                '', '', string.punctuation)).isalnum()) and
-            (allergies.translate(str.maketrans(
-                '', '', string.punctuation)).isalpha()))
+            (housenum.replace(' ','').isalnum()) and
+            (street.replace(' ','').isalpha()) and
+            (pcode.replace(' ','').isalnum()) and
+            (allergies.replace(' ','').isalpha()))
     else:
         return False
 
@@ -91,6 +87,10 @@ def signon():
         fname = str(request.form.get("fname")).strip()
         lname = str(request.form.get("lname")).strip()
         passw = str(request.form.get("passw")).strip()
+        fname = fname.translate(
+            str.maketrans('','',string.punctuation))
+        lname = lname.translate(
+            str.maketrans('','',string.punctuation))
         confirmpassw = passw
 
         if validate_input(fname, lname, passw, confirmpassw):
@@ -174,6 +174,19 @@ def signup():
         street = str(request.form.get("street")).strip().lower()
         pcode = str(request.form.get("pcode")).strip().lower()
         allergies = str(request.form.get("allergies")).strip().lower()
+
+        fname = fname.translate(str.maketrans(
+                '', '', string.punctuation))
+        lname = lname.translate(str.maketrans(
+                '', '', string.punctuation))
+        housenum = housenum.translate(str.maketrans(
+                '', '', string.punctuation))
+        street = street.translate(str.maketrans(
+                '', '', string.punctuation))
+        pcode = pcode.translate(str.maketrans(
+                '', '', string.punctuation))
+        allergies = allergies.translate(str.maketrans(
+                '', '', string.punctuation))
 
         if validate_input(
             fname, lname, passw, confirmpassw, dob,
