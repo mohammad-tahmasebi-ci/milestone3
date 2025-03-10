@@ -37,15 +37,13 @@ def validate_input(
             (datetime.today().date() -
             timedelta(days=90)))) and
             (housenum.translate(str.maketrans(
-                '', '', string.punctuation)) or
-            housenum.translate(str.maketrans(
-                '', '', string.punctuation))) and
-            street.translate(str.maketrans(
-                '', '', string.punctuation)) and
-            pcode.translate(str.maketrans(
-                '', '', string.punctuation)) and
-            allergies.translate(str.maketrans(
-                '', '', string.punctuation)))
+                '', '', string.punctuation)).isalnum()) and
+            (street.translate(str.maketrans(
+                '', '', string.punctuation)).isalpha()) and
+            (pcode.translate(str.maketrans(
+                '', '', string.punctuation)).isalnum()) and
+            (allergies.translate(str.maketrans(
+                '', '', string.punctuation)).isalpha()))
     else:
         return False
 
