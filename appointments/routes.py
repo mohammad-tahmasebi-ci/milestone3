@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 from sqlalchemy import func, cast, Date
 from sqlalchemy.exc import SQLAlchemyError
 import base64
-import string
+import re
 
 
 def validate_input(
@@ -20,31 +20,34 @@ def validate_input(
     parameter types used to register/signon a user is
     validated using this function
     """
-    return (
-        fname.strip().isalpha() and
-        lname.strip().isalpha() and
-        (len(passw) >= 8) and
-        (len(confirmpassw) >= 8) and
-        (passw == confirmpassw) and
-        ((bool(datetime.strptime(
-            dob, "%d-%m-%Y")) and
-          datetime.strptime(
-              dob, "%d-%m-%Y").date().year >= 1920) and
-         (datetime.strptime(
-             dob, "%d-%m-%Y").date() <
-          (datetime.today().date() -
-           timedelta(days=90)))) and
-        (housenum.translate(str.maketrans(
-            '', '', string.punctuation)) or
-         housenum.translate(str.maketrans(
-             '', '', string.punctuation))) and
-        street.translate(str.maketrans(
-            '', '', string.punctuation)) and
-        pcode.translate(str.maketrans(
-            '', '', string.punctuation)) and
-        allergies.translate(str.maketrans(
-            '', '', string.punctuation)))
-
+    pattern_str = r'^\d{2}-\d{2}-\d{4}$'
+    if re.match(pattern_str, dob):
+        return (
+            fname.strip().isalpha() and
+            lname.strip().isalpha() and
+            (len(passw) >= 8) and
+            (len(confirmpassw) >= 8) and
+            (passw == confirmpassw) and
+            ((bool(datetime.strptime(
+                dob, "%d-%m-%Y")) and
+            datetime.strptime(
+                dob, "%d-%m-%Y").date().year >= 1920) and
+            (datetime.strptime(
+                dob, "%d-%m-%Y").date() <
+            (datetime.today().date() -
+            timedelta(days=90)))) and
+            (housenum.translate(str.maketrans(
+                '', '', string.punctuation)) or
+            housenum.translate(str.maketrans(
+                '', '', string.punctuation))) and
+            street.translate(str.maketrans(
+                '', '', string.punctuation)) and
+            pcode.translate(str.maketrans(
+                '', '', string.punctuation)) and
+            allergies.translate(str.maketrans(
+                '', '', string.punctuation)))
+    else:
+        return False
 
 def clear_session_parameters():
     """
