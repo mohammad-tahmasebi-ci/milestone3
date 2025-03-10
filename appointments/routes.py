@@ -178,9 +178,6 @@ def signup():
             fname, lname, passw, confirmpassw, dob,
                 housenum, street, pcode, allergies):
 
-            app.logger.info(passw)
-            app.logger.info(confirmpassw)
-
             passwrd = base64.b64encode(
                 passw.encode('ascii')).decode('ascii')
             patient = Patients(FirstName=fname, LastName=lname,
