@@ -238,8 +238,8 @@ And the user is returned to the Signon screen.
 <p align="center"><img src="appointments/static/images/css-validator.png" alt="CSS Validator" width="300px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/pytest.png" alt="Python Pytest" width="300px" height="200px"></p>
 <p align="center"><img src="appointments/static/images/jest-test.png" alt="Jest Test" width="300px" height="100px"></p>
-<p align="center"><img src="appointments/static/images/manual-test1.png" alt="Manual Test 1" width="300px" height="400px"></p>
-<p align="center"><img src="appointments/static/images/manual-test2.png" alt="Manual Test 2" width="300px" height="600px"></p>
+<p align="center"><img src="appointments/static/images/manual-test1.png" alt="Manual Test 1" width="400px" height="300px"></p>
+<p align="center"><img src="appointments/static/images/manual-test2.png" alt="Manual Test 2" width="400px" height="600px"></p>
 
 ### Issues Encountered
 
