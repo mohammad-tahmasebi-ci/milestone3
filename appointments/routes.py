@@ -674,6 +674,7 @@ def confirm_appointment_update(appointment):
         session["did"] = appointment_to_update.DoctorId
         session["sreq"] = appointment_to_update.SpecialRequirement
         session["symptoms"] = appointment_to_update.Symptoms
+        session["urgent"] = appointment_to_update.IsUrgent
 
         if request.method == "POST":          
             return redirect(url_for("update_date_time"))
