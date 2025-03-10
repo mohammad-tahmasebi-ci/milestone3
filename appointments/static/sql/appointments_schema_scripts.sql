@@ -85,9 +85,9 @@ ALTER TABLE public.surgerytimes
 
 --script to populate SurgeryDays:
 
-truncate table "SurgeryDays";
+truncate table "surgerydays";
 
-INSERT INTO "SurgeryDays"("AvailableDate")
+INSERT INTO "surgerydays"("AvailableDate")
 select cast(adate as varchar(10)) from 
 (SELECT adate FROM generate_series(
     '2025-01-01'::date,
@@ -99,9 +99,9 @@ where (select extract (dow from adate)) not in (0, 6);
 
 --script to populate "SurgeryTimes":
 
-truncate table "SurgeryTimes";
+truncate table "surgerytimes";
 
-INSERT INTO "SurgeryTimes"("AvailableTimes")
+INSERT INTO "surgerysimes"("AvailableTimes")
 select substring(cast(the_day as varchar(20)), 12, 5) as the_time from
 (select the_day from
 (SELECT the_day::timestamp as the_day
