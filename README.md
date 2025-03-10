@@ -229,6 +229,9 @@ And the user is returned to the Signon screen.
 - Provide Admin menu to view/manage appointments.
 - Provide screen to display patient information to Admin/doctors.
 - Review password encryption, e.g. multifactor authentication.
+- Provide password change functionality.
+- Provide predefined templates for workflow modification.
+- Store enquiry form on the database for future reference.
 
 ## Testing
 
