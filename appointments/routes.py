@@ -97,7 +97,7 @@ def signon():
         if validate_input(fname, lname, passw, confirmpassw):
             try:
                 patient = Patients.query.filter(
-                    func.lower(Patients.FirstName) == fname.lower() and
+                    func.lower(Patients.FirstName) == fname.lower()).filter(
                     func.lower(Patients.LastName) == lname.lower()).first()
             except SQLAlchemyError as e:
                 user_message = "user record not found; "
