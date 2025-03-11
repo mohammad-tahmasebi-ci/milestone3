@@ -247,6 +247,14 @@ And the user is returned to the Signon screen.
 ### Issues Encountered
 
 Most issues were due to unfamiliarity with technologies being used.  E.g. how to construct the required query/subquery in SQLAlchemy ORM.
+E.g. using the following query to extract a specific record did not work:
+patient = Patients.query.filter(
+                    func.lower(Patients.FirstName) == fname.lower() and
+                    func.lower(Patients.LastName) == lname.lower()).first()
+After some testing the correct query was created:
+patient = Patients.query.filter(
+                    func.lower(Patients.FirstName) == fname.lower()).filter(
+                    func.lower(Patients.LastName) == lname.lower()).first()
 Another issue was using Flask conditional statements in templates to arrive at the desired result.  E.g. when trying to display a list of
 doctors but have the ones unavailable disabled.  The issue was resolve by combining parameters passed in to the template and use of For 
 loop as well as IF statements.
