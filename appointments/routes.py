@@ -192,7 +192,7 @@ def signup():
         if validate_input(
             fname, lname, passw, confirmpassw, dob,
                 housenum, street, pcode, allergies):
-
+            dob = dob[-4] + '-' + dob[3:5] + '-' + dob[0:2]
             passwrd = base64.b64encode(
                 passw.encode('ascii')).decode('ascii')
             patient = Patients(FirstName=fname, LastName=lname,
