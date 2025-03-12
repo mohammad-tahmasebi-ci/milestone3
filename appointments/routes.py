@@ -22,6 +22,7 @@ def validate_input(
     validated using this function
     """
     pattern_str = r'^\d{2}-\d{2}-\d{4}$'
+    
     if re.match(pattern_str, dob):
         return (
             fname.strip().isalpha() and
@@ -43,6 +44,7 @@ def validate_input(
             (allergies.replace(' ','').isalpha()))
     else:
         return False
+
 
 def clear_session_parameters():
     """
@@ -88,13 +90,16 @@ def signon():
         fname = str(request.form.get("fname")).strip()
         lname = str(request.form.get("lname")).strip()
         passw = str(request.form.get("passw")).strip()
+
         fname = fname.translate(
             str.maketrans('','',string.punctuation))
         lname = lname.translate(
             str.maketrans('','',string.punctuation))
+
         confirmpassw = passw
 
         if validate_input(fname, lname, passw, confirmpassw):
+
             try:
                 patient = Patients.query.filter(
                     func.lower(Patients.FirstName) == fname.lower()).filter(
@@ -175,7 +180,7 @@ def signup():
         street = str(request.form.get("street")).strip().lower()
         pcode = str(request.form.get("pcode")).strip().lower()
         allergies = str(request.form.get("allergies")).strip().lower()
-
+        
         fname = fname.translate(str.maketrans(
                 '', '', string.punctuation))
         lname = lname.translate(str.maketrans(
@@ -192,9 +197,12 @@ def signup():
         if validate_input(
             fname, lname, passw, confirmpassw, dob,
                 housenum, street, pcode, allergies):
+            
             dob = dob[-4] + '-' + dob[3:5] + '-' + dob[0:2]
+
             passwrd = base64.b64encode(
                 passw.encode('ascii')).decode('ascii')
+            
             patient = Patients(FirstName=fname, LastName=lname,
                                Password=passwrd, BirthDate=dob,
                                HouseNumber=housenum, StreetName=street,
@@ -210,6 +218,7 @@ def signup():
                                        forward_page="signon")
             except SQLAlchemyError as e:
                 user_message = "User has already been registered!"
+                user_message += str(e.__dict__['orig'])
 
                 return render_template("user_message.html",
                                        user_message=user_message,
@@ -287,11 +296,9 @@ def view_appointments():
                     Appointments.AppointmentDate).all()
 
         if appointments is not None:
-
             return render_template("view_appointments.html",
                                    appointments=appointments)
         else:
-
             return render_template("view_appointments.html")
 
 
@@ -491,7 +498,7 @@ def update_doctor():
 
             existing_doctor = Doctors.query.filter(
                 Doctors.DoctorId == session.get("did")).first()
-            
+
             if existing_doctor:
                 session["existing_id"] = existing_doctor.DoctorId
 
@@ -563,6 +570,15 @@ def make_appointments():
             aptmnt_id = session.get("aptmnt_id")
             appointment = Appointments.query.filter(
                 Appointments.AppointmentId == aptmnt_id).first()
+            
+            if (appointment.PatientId != pid):
+                clear_session_parameters()
+                user_message = "no records to update"
+                return render_template(
+                    "user_message.html",
+                    user_message=user_message,
+                    forward_page="view_appointments")
+
             if appointment is not None:
                 appointment.DoctorId = did
                 appointment.AppointmentDate = aptmnt_date
@@ -586,7 +602,8 @@ def make_appointments():
                 forward_page="view_appointments")
     else:
         appointment_exist = Appointments.query.filter(
-            Appointments.PatientId == pid, Appointments.DoctorId == did,
+            Appointments.PatientId == pid,
+            Appointments.DoctorId == did,
             Appointments.AppointmentDate == aptmnt_date,
             Appointments.AppointmentTime == aptmnt_time).first()
 
@@ -660,8 +677,9 @@ def confirm_appointment_update(appointment):
                 Doctors.FirstName,
                 Doctors.LastName).filter(
                     Appointments.AppointmentId == appointment).filter(
-                        Doctors.DoctorId == Appointments.DoctorId).order_by(
-                            Appointments.AppointmentDate).first()
+                        Doctors.DoctorId == Appointments.DoctorId).filter(
+                            Appointments.PatientId == session.get("pid")).order_by(
+                                Appointments.AppointmentDate).first()
         except SQLAlchemyError as e:
             clear_session_parameters()
             user_message = str(e.__dict__['orig'])
@@ -669,20 +687,21 @@ def confirm_appointment_update(appointment):
                 "user_message.html",
                 user_message=user_message,
                 forward_page="view_appointments")
-                    
-        session["appointment_date"] = appointment_to_update.AppointmentDate
-        session["appointment_time"] = appointment_to_update.AppointmentTime
-        session["did"] = appointment_to_update.DoctorId
-        session["sreq"] = appointment_to_update.SpecialRequirement
-        session["symptoms"] = appointment_to_update.Symptoms
-        session["urgent"] = appointment_to_update.IsUrgent
 
-        if request.method == "POST":          
-            return redirect(url_for("update_date_time"))
-        else:
-            return render_template(
-                'confirm_appointment_update.html',
-                appointment_to_update=appointment_to_update)
+        if appointment_to_update is not None:
+            session["appointment_date"] = appointment_to_update.AppointmentDate
+            session["appointment_time"] = appointment_to_update.AppointmentTime
+            session["did"] = appointment_to_update.DoctorId
+            session["sreq"] = appointment_to_update.SpecialRequirement
+            session["symptoms"] = appointment_to_update.Symptoms
+            session["urgent"] = appointment_to_update.IsUrgent
+
+            if request.method == "POST":          
+                return redirect(url_for("update_date_time"))
+            else:
+                return render_template(
+                    'confirm_appointment_update.html',
+                    appointment_to_update=appointment_to_update)
 
     return redirect(url_for('view_appointments'))
 
@@ -707,8 +726,9 @@ def confirm_appointment_deletion(appointment):
             Doctors.FirstName,
             Doctors.LastName).filter(
                 Appointments.AppointmentId == appointment).filter(
-                    Doctors.DoctorId == Appointments.DoctorId).order_by(
-                        Appointments.AppointmentDate).first()
+                    Doctors.DoctorId == Appointments.DoctorId).filter(
+                            Appointments.PatientId == session.get("pid")).order_by(
+                                Appointments.AppointmentDate).first()
 
         return render_template(
             "confirm_appointment_deletion.html",
@@ -732,7 +752,8 @@ def delete_appointment(appointment):
 
     if appointment is not None:
         appointment_to_delete = Appointments.query.filter(
-            Appointments.AppointmentId == appointment).first()
+            Appointments.AppointmentId == appointment).filter(
+                Appointments.PatientId == session.get("pid")).first()
         try:
             db.session.delete(appointment_to_delete)
             db.session.commit()
