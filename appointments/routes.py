@@ -455,7 +455,7 @@ def choose_doctor():
         did = request.form.get("doctors_list")
         sreq = request.form.get("special_requirement")
         symptoms = request.form.get("symptoms")
-        urgent = request.form.get("urgent") == 'on'
+        urgent = request.form.get("urgent") == 'yes'
         session["did"] = did
         session["sreq"] = sreq
         session["symptoms"] = symptoms
