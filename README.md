@@ -1,4 +1,4 @@
-<p align="center"><img src="appointments/static/images/am-i-responsive.png" alt="Signup Form" width="500px" height="500px"></p>
+<p align="center"><img src="appointments/static/images/am-i-responsive.png" alt="Signup Form" width="700px" height="700px"></p>
 
 # The Community Surgery Appointment System
 
@@ -243,6 +243,11 @@ And the user is returned to the Signon screen.
 <p align="center"><img src="appointments/static/images/jest-test.png" alt="Jest Test" width="300px" height="100px"></p>
 <p align="center"><img src="appointments/static/images/manual-test1.png" alt="Manual Test 1" width="400px" height="300px"></p>
 <p align="center"><img src="appointments/static/images/manual-test2.png" alt="Manual Test 2" width="400px" height="600px"></p>
+
+Firefox, MS Edge, Google Chrome browsers were used to test the application.  In each browser, different device type simulation was used.
+For each simulation a random set of operations were carried; e.g. create a new appointment followed by delete; or create an appointment
+followed by update and delete; or create an appointment followed by filling and submitting patient enquiry form; or create an appointment
+followed by delete.  In all test scenarios the result was as expected.
 
 ### Issues Encountered
 
