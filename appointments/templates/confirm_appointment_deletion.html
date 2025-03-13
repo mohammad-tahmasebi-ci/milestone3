@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+<!-- navbar menu option to be displayed on this screen -->
+{% block navoptions %}
+
+<li><a href="{{ url_for('view_appointments') }}">Appointments</a></li>
+<li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+{% endblock %}
+
 {% block content %}
 
 <div class="row">
