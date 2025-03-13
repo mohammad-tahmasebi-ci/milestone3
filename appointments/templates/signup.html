@@ -1,5 +1,12 @@
 {% extends "base.html"%}
 
+<!-- navbar menu option to be displayed on this screen -->
+{% block navoptions %}
+
+<li><a href="{{ url_for('signon') }}">Signon</a></li>
+
+{% endblock %}
+
 {% block content %}
 
    <div class="form-wrapper">
