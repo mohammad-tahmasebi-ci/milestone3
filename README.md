@@ -1,4 +1,4 @@
-<p align="center"><img src="appointments/static/images/am-i-responsive.png" alt="Signup Form" width="400px" height="400px"></p>
+<p align="center"><img src="appointments/static/images/am-i-responsive.png" alt="Signup Form" width="500px" height="500px"></p>
 
 # The Community Surgery Appointment System
 
