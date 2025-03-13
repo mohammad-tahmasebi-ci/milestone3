@@ -139,7 +139,7 @@ form .btn input[type="submit"] {
 
 /* begin user message page setting */
 #modal1 {
-  width: 600px;
+  width: 300px;
   height: 150px;
   margin-top: 100px;
   background-color: rgb(179, 238, 232);
