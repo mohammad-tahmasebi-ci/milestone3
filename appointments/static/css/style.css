@@ -1,21 +1,20 @@
+/* set font family to be used */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 
-/* set general configuration */ 
+/* begin general app wide settings */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-/* end general configuration */ 
 
-/* set base template configuration to be inherited by all page */ 
 html,
 body {
   height: 100%; 
   background: #282a36;
   margin: auto;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 body {
@@ -30,9 +29,18 @@ body {
 main {
   flex: 1 0 auto;
 }
-/* end base template configuration */ 
 
-/* begin signon/signup pages' css instructions */ 
+/* begin footer setting */
+footer {
+  padding-bottom: 15px;
+  text-align: center;
+}
+/* end footer setting */
+
+/* end general app wide settings */
+
+/* begin signon, signup page css instructions */ 
+
 .form-wrapper {
   overflow: hidden; 
   place-items: center;
@@ -113,25 +121,23 @@ form .btn input[type="submit"] {
   font-weight: 500;
   cursor: pointer;
 }
-/* end of signon/signup pages' css instructions */
 
-/* begin footer configuration */ 
-footer {
-  padding-bottom: 15px;
-  text-align: center;
-}
+/* end of signon, signup page css instructions */
 
+/* begin font setting for input fields on doctor selection page */
 .custom-large {
   font-size: 18px;
 }
+/* end font setting for input fields on doctor selection page */
 
+/* begin card setting on view appointments page */
 #card-btn {
   background-color: red;
   color: darkviolet;
 }
-/* end general configuration */ 
+/* end card setting on view appointments page */
 
-/* begin modal user-message box configuration */ 
+/* begin user message page setting */
 #modal1 {
   width: 600px;
   height: 150px;
@@ -142,4 +148,4 @@ footer {
 #modal1 .modal-footer {
   background-color: rgb(179, 238, 232);
 }
-/* end modal user-message box configuration */
+/* end user message page setting */
